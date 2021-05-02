@@ -1,0 +1,18 @@
+.coloring{
+    color: rgb(212, 87, 87);
+}
+.texts{
+    color: gray;
+}
+.pic{
+    box-shadow: 2px 2px 5px gray;
+}
+.home{
+    background-color: rgb(231, 245, 198);
+}
+.button-text{
+    color: brown;
+}
+.anchors{
+    text-decoration: none;
+}
