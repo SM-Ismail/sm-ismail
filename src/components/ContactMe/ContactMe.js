@@ -1,57 +1,54 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import apiKeys from './apikeys';
+import './ContactMe.css';
 
 const ContactMe = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    console.log(apiKeys);
+    // const { register, handleSubmit, formState: { errors } } = useForm();
     // const onSubmit = formData => {
     //     console.log(formData);
     // };
-    const onSubmit = (formData, e) => {
-        console.log(formData);
+    const onSubmit = (e) => {
+        // console.log(formData);
         e.preventDefault()// Prevents default refresh by the browser
-        emailjs.sendForm('gmail', apiKeys.TEMPLATE_ID, e.target, apiKeys.USER_ID)
+        emailjs.sendForm(apiKeys.SERVICE_ID, apiKeys.TEMPLATE_ID, e.target, apiKeys.USER_ID)
             .then(result => {
                 alert('Message Sent, I\'ll get back to you shortly', result.text);
                 console.log(apiKeys.TEMPLATE_ID)
             },
-            error => {
-                alert('An error occured, Plese try again', error.text)
-            })
+                error => {
+                    alert('An error occured, Plese try again', error.text)
+                })
     };
 
     return (
         <div>
-            {/* <form className=”form” onSubmit = {onSubmit}>
-            service Id : service_ynp0vq5
+            <h3 className="top">Get in Touch !</h3>
+            <p className="top">Drop your message, please. I will get back to you.</p>
+            <div style={{ marginTop: '20px', marginLeft: '100px', marginRight: '100px'}}>
+                <form className='form p-2' onSubmit={onSubmit}>
+                    {/* service Id : service_ynp0vq5    service_lf769mc
             user id: user_bH6vMUhbc5uXgQ9sa9ouS
-            template id: template_naeg3xt
-            <p>Your Name:</p>
-            <input name=’name’ type=”text” placeholder=”name…” className=”form__input” />
-            <p>Subject:</p>
-            <input name=’subject’ type=”text” placeholder=”Subject…” className=”form__input” />
-            <p>Your Message:</p>
-            <textarea name=’message’ type=”text” placeholder=”Your Message…” className=”form__input-message” ></textarea>
-            <button className=”form__input — button”>Send Message</button>
-        </form > */}
-
-            <form onSubmit={handleSubmit(onSubmit)} style={{ width: "50%" }} className="m-auto mt-5">
-                <input className="form-control" placeholder="Name" {...register("name", { required: true })} />
-                {errors.name && <span className='text-danger'>This field is required</span>}
-                <br />
-                <input className="form-control" placeholder="email" {...register("email", { required: true })} />
-                {errors.email && <span className='text-danger'>This field is required</span>}
-                <br />
-                <input className="form-control" placeholder="Subject" {...register("subject", { required: true })} />
-                {errors.subject && <span className='text-danger'>This field is required</span>}
-                <br />
-                <input className="form-control" placeholder="Your message please" {...register("message", { required: true })} />
-                {errors.message && <span className='text-danger'>This field is required</span>}
-                <br />
-                <input className="form-control bg-light" type="submit" />
-            </form>
+            template id: template_naeg3xt */}
+                    <h5 className="headings">Your Name:</h5>
+                    <input name='name' type="text" placeholder=" Enter your name here. . . " className="form__input form-control inputs" />
+                    <br />
+                    <h5 className="headings">Your Email:</h5>
+                    <input name='email' type="text" placeholder="Enter your email here . . ." className="form__input form-control inputs" />
+                    <br />
+                    <h5 className="headings">Subject:</h5>
+                    <input name='subject' type="text" placeholder="Subject,please . . . " className="form__input form-control inputs" />
+                    <br />
+                    <h5 className="headings">Your Message:</h5>
+                    <textarea name='message' type="text" placeholder="Your Message, please . . . " className="form__input-message form-control inputs" ></textarea>
+                    <br />
+                    <button className="form__input — button btn btn-warning btn-lg">Send Message</button>
+                </form >
+            </div>
         </div>
+
     );
 
 };
