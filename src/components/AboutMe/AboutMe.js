@@ -15,7 +15,7 @@ const AboutMe = () => {
                     <img src={meInani} class="rounded img-fluid pic" alt="..." />
                 </div>
                 <div class="col-sm col-md-6 px-5">
-                    <h4>I design and build websites with a great user experience. FullStack is my thing! So I've got both your "front end" and "back end" tasks handled.</h4>
+                    <h4 className='texts fs-3'>I design and build websites with a great user experience. FullStack is my thing! So I've got both your "front end" and "back end" tasks handled.</h4>
                     <div className = "mt-4">
                         <h3>My Tools</h3>
                     </div>
@@ -34,7 +34,7 @@ const AboutMe = () => {
                         <h2 className="col-sm col-md-4 p-2"><span class="badge bg-secondary">Python</span></h2>
                     </div>
                     
-                    <button onClick={handleBtnWorks} type="button" className="btn btn-light btn-lg texts button m-5"> 
+                    <button onClick={handleBtnWorks} type="button" className="btn btn-light btn-lg texts sizing shadowing m-4"> 
                                 Get to Know My Works
                     </button>
                 </div>

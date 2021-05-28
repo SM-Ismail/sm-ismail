@@ -2,7 +2,7 @@
     font-size: larger;
 }
 .texts{
-    color: gray;
+    color:gray;
 }
 .pic{
     box-shadow: 2px 2px 5px gray;
@@ -13,8 +13,9 @@
 .button-text{
     color: gray;
 }
-.button{
+.shadowing{
     border: 1px solid gray;
+    box-shadow: 2px 2px 6px gray;
 }
 .anchors{
     text-decoration: none;
@@ -23,6 +24,10 @@
 .anchors1{
     text-decoration: none;
 }
-.font{
-    font-family: roboto;
+.sizing{
+    /* font-family: roboto; */
+    font-size: 30px;
+}
+.res-prj{
+    font-size: 27px;
 }
