@@ -2,6 +2,10 @@
 
 src/saveComponents/
 
+# {/* service Id :  service_lf769mc
+#user id: user_bH6vMUhbc5uXgQ9sa9ouS
+#template id: template_naeg3xt */}
+
 # dependencies
 /node_modules
 /.pnp

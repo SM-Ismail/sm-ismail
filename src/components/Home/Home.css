@@ -1,5 +1,5 @@
-.coloring{
-    color: rgb(212, 87, 87);
+.highlight{
+    font-size: larger;
 }
 .texts{
     color: gray;
@@ -8,11 +8,21 @@
     box-shadow: 2px 2px 5px gray;
 }
 .home{
-    background-color: rgb(231, 245, 198);
+    background-color: rgb(255, 255, 255);
 }
 .button-text{
-    color: brown;
+    color: gray;
+}
+.button{
+    border: 1px solid gray;
 }
 .anchors{
     text-decoration: none;
+    color: black; 
+}
+.anchors1{
+    text-decoration: none;
+}
+.font{
+    font-family: roboto;
 }

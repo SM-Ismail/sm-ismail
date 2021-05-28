@@ -7,8 +7,8 @@ import {
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
-import AboutMe from './components/AboutMe/AboutMe';
 import ContactMe from './components/ContactMe/ContactMe';
+import Blogs from './components/Blogs/Blogs';
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
           <Route path="/projects">
             <Projects></Projects>
           </Route>
-          <Route path="/about-me">
-            <AboutMe></AboutMe>
+          <Route path="/blogs">
+            <Blogs></Blogs>
           </Route>
           <Route path="/contact-me">
             <ContactMe></ContactMe>

@@ -1,10 +1,10 @@
 .inputs{
-    border: 1px solid gold;
-    box-shadow: 1px 1px 3px gold;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px gray;
 }
 .headings{
-    color: green;
+    color: gray;
 }
 .top{
-    color: brown;
+    color: gray;
 }

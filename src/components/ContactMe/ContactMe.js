@@ -5,14 +5,8 @@ import apiKeys from '../../saveComponents/apikeys';
 import './ContactMe.css';
 
 const ContactMe = () => {
-    console.log(apiKeys);
-    // const { register, handleSubmit, formState: { errors } } = useForm();
-    // const onSubmit = formData => {
-    //     console.log(formData);
-    // };
     const onSubmit = (e) => {
-        // console.log(formData);
-        e.preventDefault()// Prevents default refresh by the browser
+        e.preventDefault() // Prevents default refresh by the browser
         emailjs.sendForm(apiKeys.SERVICE_ID, apiKeys.TEMPLATE_ID, e.target, apiKeys.USER_ID)
             .then(result => {
                 alert('Message Sent, I\'ll get back to you shortly', result.text);
@@ -29,9 +23,7 @@ const ContactMe = () => {
             <p className="top">Drop your message, please. I will get back to you.</p>
             <div style={{ marginTop: '20px', marginLeft: '100px', marginRight: '100px'}}>
                 <form className='form p-2' onSubmit={onSubmit}>
-                    {/* service Id : service_ynp0vq5    service_lf769mc
-            user id: user_bH6vMUhbc5uXgQ9sa9ouS
-            template id: template_naeg3xt */}
+                   
                     <h5 className="headings">Your Name:</h5>
                     <input name='name' type="text" placeholder=" Enter your name here. . . " className="form__input form-control inputs" />
                     <br />
@@ -44,7 +36,7 @@ const ContactMe = () => {
                     <h5 className="headings">Your Message:</h5>
                     <textarea name='message' type="text" placeholder="Your Message, please . . . " className="form__input-message form-control inputs" ></textarea>
                     <br />
-                    <button className="form__input — button btn btn-warning btn-lg">Send Message</button>
+                    <button className="form__input button btn btn-light btn-lg">Send Message</button>
                 </form >
             </div>
         </div>

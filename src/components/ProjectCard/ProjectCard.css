@@ -1,6 +1,20 @@
-#points{
+/* #points{
     display: none;
-}
+} */
 .box{
     box-shadow: 2px 2px 4px pink;
+}
+.anchors{
+    text-decoration: none;
+}
+.text{
+    color: gray;
+    font-size: 16px;
+}
+.button{
+    border: 1px solid gray;
+}
+.font{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 25px;
 }
